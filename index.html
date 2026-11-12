@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoboSafe | Detector Inteligente de Gás</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Robo<span>Safe</span></div>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#projeto">Projeto</a>
+      <a href="#simulador">Simulador</a>
+      <a href="#componentes">Componentes</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <p class="tag">ROBÓTICA • TECNOLOGIA • SEGURANÇA</p>
+      <h1>Sistema Inteligente de <span>Alerta de Gás</span></h1>
+      <p>
+        Uma solução tecnológica desenvolvida com Arduino e sensor MQ-2
+        para identificar possíveis concentrações de gases e emitir alertas.
+      </p>
+      <a href="#simulador" class="btn">Testar simulador</a>
+    </div>
+  </section>
+
+  <section class="section" id="projeto">
+    <h2>Sobre o projeto</h2>
+    <p>
+      O RoboSafe é um projeto de robótica que utiliza o Arduino Uno
+      e o sensor MQ-2 para monitorar a presença de determinados gases.
+      Quando a leitura ultrapassa um limite configurado, o sistema
+      pode acionar um LED vermelho e um buzzer.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Monitoramento</h3>
+        <p>Realiza leituras contínuas do sensor.</p>
+      </div>
+      <div class="card">
+        <h3>Identificação</h3>
+        <p>Compara a leitura com um limite definido.</p>
+      </div>
+      <div class="card">
+        <h3>Alerta</h3>
+        <p>Indica uma condição de atenção por sinais visuais e sonoros.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section simulator" id="simulador">
+    <h2>Simulador de monitoramento</h2>
+    <p>Movimente o controle para simular diferentes níveis de leitura.</p>
+
+    <div class="monitor">
+      <div id="status" class="status safe">AMBIENTE NORMAL</div>
+
+      <div class="reading">
+        <span id="sensorValue">120</span>
+        <small>Leitura simulada (0–1023)</small>
+      </div>
+
+      <input type="range" id="gasSlider" min="0" max="1023" value="120">
+
+      <div class="scale">
+        <span>Baixo</span>
+        <span>Alto</span>
+      </div>
+
+      <div class="indicators">
+        <div class="indicator">
+          <div id="greenLed" class="led green active"></div>
+          <span>LED verde</span>
+        </div>
+        <div class="indicator">
+          <div id="redLed" class="led red"></div>
+          <span>LED vermelho</span>
+        </div>
+        <div class="indicator">
+          <div id="buzzer" class="buzzer"></div>
+          <span>Buzzer</span>
+        </div>
+      </div>
+
+      <p id="message">Sistema funcionando normalmente.</p>
+    </div>
+  </section>
+
+  <section class="section" id="componentes">
+    <h2>Componentes utilizados</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Arduino Uno</h3>
+        <p>Controla o funcionamento do sistema.</p>
+      </div>
+      <div class="card">
+        <h3>Sensor MQ-2</h3>
+        <p>Detecta a presença de determinados gases e fumaça.</p>
+      </div>
+      <div class="card">
+        <h3>LEDs</h3>
+        <p>Indicam visualmente o estado do sistema.</p>
+      </div>
+      <div class="card">
+        <h3>Buzzer</h3>
+        <p>Emite um sinal sonoro de alerta.</p>
+      </div>
+      <div class="card">
+        <h3>Display LCD</h3>
+        <p>Pode apresentar informações e mensagens do sistema.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h3>RoboSafe</h3>
+    <p>Sistema Inteligente de Alerta de Gás</p>
+    <p>Projeto educacional de robótica com Arduino.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
